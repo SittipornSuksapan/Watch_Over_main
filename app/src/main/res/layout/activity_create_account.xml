@@ -15,44 +15,96 @@
         android:layout_marginTop="40dp"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/edtName"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/edtUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username" />
+            <ImageView
 
-        <EditText
-            android:id="@+id/edtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name" />
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/edtRepassword"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Re-Password" />
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/edtGender"
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Gender" />
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtRepassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Re-Password" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edtGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Gender" />
+        </LinearLayout>
 
     </LinearLayout>
-    <Button
-        android:layout_alignParentBottom="true"
-        android:id="@+id/btnContCreateAccount"
-        android:text="Continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/btnContCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn2"
+        android:text="Continue"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

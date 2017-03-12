@@ -66,6 +66,10 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
             MyAlert myAlert = new MyAlert(CreateAccountActivity.this);
             myAlert.myDialog("มีช่องว่าง","กรุณากรอกทุกช่อง");
+        } else if (!passwordString.equals(rePasswordString)) {
+            //Password not match
+            MyAlert myAlert = new MyAlert(CreateAccountActivity.this);
+            myAlert.myDialog("Password ไม่ตรงกัน","กรุณากรอกให้ตรงกันด้วย");
         }
 
     }//onClick

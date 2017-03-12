@@ -1,5 +1,6 @@
 package mean.chan.mind.sendgps;
 
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -16,6 +18,8 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     private RadioButton maleRadioButton,femaleRadioButton;
     private Button button;
     private  String nameString, userString,passwordString,rePasswordString,genderString;
+
+    private int anInt; //0==>male 1==>female
 
 
 
@@ -28,7 +32,25 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
         buttonController();
 
+        radioController();
+
     }//main method
+
+    private void radioController() {
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                switch (checkedId){
+                    case R.id.radMale:
+                        anInt = 0;
+                        break;
+                    case R.id.radFemale:
+                        anInt = 1;
+                        break;
+                }
+            }
+        });
+    }
 
     private void buttonController() {
 
@@ -84,6 +106,23 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     }//onClick
 
     private void upLoadValueToServer() {
+
+        try {
+
+            PostValueToParent postValueToParent = new PostValueToParent(CreateAccountActivity.this,
+                    nameString,userString,passwordString,Integer.toString(anInt));
+            postValueToParent.execute();
+            if (Boolean.parseBoolean(postValueToParent.get())) {
+                Toast.makeText(CreateAccountActivity.this,"Upload Success",Toast.LENGTH_SHORT).show();
+                finish();
+            } else {
+                MyAlert myAlert = new MyAlert(CreateAccountActivity.this);
+                myAlert.myDialog("Upload False","ไม่สามารถอัพโหลดข้อมูลดได้");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }//upload
 } //main

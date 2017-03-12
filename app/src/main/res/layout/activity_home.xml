@@ -6,4 +6,28 @@
     android:layout_height="match_parent"
     tools:context="mean.chan.mind.sendgps.HomeActivity">
 
+
+    <LinearLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Watch Over"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:background="@drawable/btn2"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnContHome"
+        android:text="Create Account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>

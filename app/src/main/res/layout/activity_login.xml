@@ -3,7 +3,74 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="mean.chan.mind.sendgps.LoginActivity">
+
+    <LinearLayout
+
+        android:id="@+id/linLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:background="@color/abc_input_method_navigation_guard"
+            android:id="@+id/txtLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="LOGIN" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/linLayout"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/linTopLogin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/EdtUser"
+            android:hint="User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/EdtPassword"
+            android:hint="Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_below="@+id/EdtPassword"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btnLogin"
+            android:text="Continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+
+            android:id="@+id/btnRePassword"
+            android:textColor="#000000"
+            android:text="Forgotten your password?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/btnCreate"
+            android:textColor="#000000"
+            android:text="Create Account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>

@@ -20,7 +20,7 @@
     <TextView
         android:layout_below="@+id/imvLogoSplash"
         android:layout_centerHorizontal="true"
-        android:textColor="#FFFFFF"
+        android:textColor="#080808"
         android:textStyle="bold"
         android:textSize="35sp"
         android:text="@string/app_name"

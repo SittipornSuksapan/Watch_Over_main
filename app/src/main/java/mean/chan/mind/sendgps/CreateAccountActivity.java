@@ -70,7 +70,20 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
             //Password not match
             MyAlert myAlert = new MyAlert(CreateAccountActivity.this);
             myAlert.myDialog("Password ไม่ตรงกัน","กรุณากรอกให้ตรงกันด้วย");
+        } else if (maleRadioButton.isChecked()||femaleRadioButton.isChecked()) {
+            //Check Radio button
+            upLoadValueToServer();
+
+
+        } else{
+            //Non check
+            MyAlert myAlert = new MyAlert(CreateAccountActivity.this);
+            myAlert.myDialog("ยังไม่เลือก Gender","กรุณาเลือก Gender");
         }
 
     }//onClick
+
+    private void upLoadValueToServer() {
+
+    }//upload
 } //main

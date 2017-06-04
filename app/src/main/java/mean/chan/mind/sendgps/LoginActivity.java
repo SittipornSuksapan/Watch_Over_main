@@ -112,6 +112,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             } else if (passwordString.equals(loginStrings[3])) {
                 Toast.makeText(LoginActivity.this, "Welcome " + loginStrings[1],
                         Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(LoginActivity.this, FirstActivity.class);
+                intent.putExtra("Login", loginStrings);
+                startActivity(intent);
+                finish();
+
             } else {
                 myAlert.myDialog("Password False", "Please Try Again Password False");
             }

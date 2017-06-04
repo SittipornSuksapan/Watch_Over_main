@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="mean.chan.mind.sendgps.FirstActivity"
-    android:background="@drawable/firstblue2_1000">
+    >
 
 
 

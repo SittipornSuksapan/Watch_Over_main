@@ -22,6 +22,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         initialView();
 
         clickController();
+
     }// Main Method
 
     private void clickController() {

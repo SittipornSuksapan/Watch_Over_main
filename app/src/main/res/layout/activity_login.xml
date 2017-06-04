@@ -55,10 +55,12 @@
                 android:src="@mipmap/username" />
 
             <EditText
-                android:id="@+id/EdtUser"
+                android:id="@+id/edtUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Username" />
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -76,7 +78,7 @@
                 android:src="@mipmap/password" />
 
             <EditText
-                android:id="@+id/EdtPassword"
+                android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -102,7 +104,7 @@
                 />
 
             <TextView
-                android:id="@+id/btnRePassword"
+                android:id="@+id/txtForgot"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -114,7 +116,7 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/btnCreate"
+                android:id="@+id/txtCreateAccount"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"

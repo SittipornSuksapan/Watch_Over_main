@@ -16,7 +16,7 @@ import com.squareup.okhttp.Response;
 
 public class PostValueToParent extends AsyncTask<Void, Void, String>{
     private Context context;
-    private static final String urlPHP = "http://swiftcodingthai.com/watch/addParentMind.php";
+    private static final String urlPHP = "http://androidthai.in.th/dom/addParentMind.php";
     private String nameString,userString,passwordString,genderString;
 
     public PostValueToParent(Context context,

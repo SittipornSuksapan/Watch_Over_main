@@ -23,9 +23,6 @@ import com.squareup.okhttp.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import mean.chan.mind.sendgps.MainActivity;
-import mean.chan.mind.sendgps.PlateAdapter;
-
 public class FirstActivity extends AppCompatActivity {
 
     //Explicit
@@ -152,8 +149,8 @@ public class FirstActivity extends AppCompatActivity {
 
     private void loopCheckUser() {
 
-        ConnectedLocalUser connectedLocalUser = new ConnectedLocalUser();
-        connectedLocalUser.execute();
+//        ConnectedLocalUser connectedLocalUser = new ConnectedLocalUser();
+//        connectedLocalUser.execute();
 
         //Delay
         Handler handler = new Handler();
@@ -188,7 +185,7 @@ public class FirstActivity extends AppCompatActivity {
 
                 OkHttpClient okHttpClient = new OkHttpClient();
                 Request.Builder builder = new Request.Builder();
-                Request request = builder.url("http://swiftcodingthai.com/watch/php_get_plate.php").build();
+                Request request = builder.url("http://androidthai.in.th/dom/getPlate.php").build();
                 Response response = okHttpClient.newCall(request).execute();
                 return response.body().string();
 

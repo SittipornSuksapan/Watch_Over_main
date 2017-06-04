@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             String strLat = latTextView.getText().toString();
             String strLng = lngTextView.getText().toString();
-           // updateValueToServer(strName,strLat,strLng);
+            updateValueToServer(strName,strLat,strLng);
         }
 
     } //clickSaveData
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 .add("Lng",strLng)
                 .build();
         Request.Builder builder = new Request.Builder();
-        Request request = builder.url("http://swiftcodingthai.com/watch/php_add_plate.php").post(requestBody).build();
+        Request request = builder.url("http://androidthai.in.th/dom/addPlate.php").post(requestBody).build();
         Call call = okHttpClient.newCall(request);
         call.enqueue(new Callback() {
             @Override

@@ -8,7 +8,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="mean.chan.mind.sendgps.FirstActivity"
-    android:background="@drawable/wall15">
+    android:background="@drawable/firstblue2">
+
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,6 +38,8 @@
         android:id="@+id/listView"
         android:layout_below="@+id/textView6"
         android:layout_above="@+id/button"
-        android:layout_margin="15dp"
+        android:layout_margin="20dp"
         android:background="#82ffffff" />
+    
+
 </RelativeLayout>

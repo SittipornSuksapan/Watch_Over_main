@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -87,6 +91,30 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             getAllData.execute(urlJSONString);
             String strJSON = getAllData.get();
             Log.d("4JuneV1", "JSON ==> " + strJSON);
+            String[] columnStrings = new String[]{"id", "Name", "User", "Password", "Gender"};
+            String[] loginStrings = new String[columnStrings.length];
+
+            boolean b = true;
+            JSONArray jsonArray = new JSONArray(strJSON);
+            for (int i=0;i<jsonArray.length();i+=1) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                if (userString.equals(jsonObject.getString("User"))) {
+                    b = false;
+                    for (int i1=0;i1<columnStrings.length;i1+=1) {
+                        loginStrings[i1] = jsonObject.getString(columnStrings[i1]);
+                        Log.d("4JuneV1", "login(" + i1 + ") ==> " + loginStrings[i1]);
+                    }
+                }
+            }
+
+            if (b) {
+                myAlert.myDialog("User False", "No This User in my Database");
+            } else if (passwordString.equals(loginStrings[3])) {
+                Toast.makeText(LoginActivity.this, "Welcome " + loginStrings[1],
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                myAlert.myDialog("Password False", "Please Try Again Password False");
+            }
 
         } catch (Exception e) {
             Log.d("4JuneV1", "e check ==> " + e.toString());

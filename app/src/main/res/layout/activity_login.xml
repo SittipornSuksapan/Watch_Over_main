@@ -96,7 +96,7 @@
                 android:layout_weight="1"
                 android:layout_marginTop="10dp"
                 android:background="#29434e"
-                android:text="Continue"
+                android:text="Login"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -111,7 +111,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:clickable="true"
-                android:text="Forgotten your password?"
+                android:text="Forgot your password?"
                 android:textColor="#cf0505"
                 android:textSize="15sp" />
 

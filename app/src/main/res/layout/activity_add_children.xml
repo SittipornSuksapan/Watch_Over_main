@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="mean.chan.mind.sendgps.AddChildrenActivity">
+
+<com.roughike.bottombar.BottomBar
+    android:id="@+id/bottomBar"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_gravity="bottom"
+    android:layout_alignParentBottom="true"
+    app:bb_tabXmlResource="@xml/buttom_menu"
+    app:bb_inActiveTabAlpha="0.7"
+    app:bb_activeTabAlpha="1"
+    app:bb_inActiveTabColor="#757575"
+    app:bb_activeTabColor="#00B8D4" />
+
+</RelativeLayout>

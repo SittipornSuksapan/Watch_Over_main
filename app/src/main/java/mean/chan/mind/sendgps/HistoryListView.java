@@ -20,6 +20,7 @@ import java.util.Objects;
 public class HistoryListView extends AppCompatActivity {
 
     private ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +42,7 @@ public class HistoryListView extends AppCompatActivity {
                 Request.Builder builder = new Request.Builder();
                 Request request = builder.url("http://swiftcodingthai.com/watch/php_get_history.php").build();
                 Response response = okHttpClient.newCall(request).execute();
-                return  response.body().string();
+                return response.body().string();
             } catch (Exception e) {
                 e.printStackTrace();
                 return null;
@@ -74,7 +75,7 @@ public class HistoryListView extends AppCompatActivity {
                 } //for
 
                 Objects[] objects = (Objects[]) stringArrayList.toArray();
-                for (Objects objects1 : objects ){
+                for (Objects objects1 : objects) {
                     if (stringArrayList.indexOf(objects1) != stringArrayList.lastIndexOf(objects1)) {
                         stringArrayList.remove(stringArrayList.lastIndexOf(objects1));
 

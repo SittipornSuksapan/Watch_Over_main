@@ -10,7 +10,7 @@ import android.widget.TextView;
 /**
  * Created by MindBU on 21/4/2559.
  */
-public class PlateAdapter extends BaseAdapter{
+public class PlateAdapter extends BaseAdapter {
 
     //Explicit
     private Context context;

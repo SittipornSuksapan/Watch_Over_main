@@ -96,11 +96,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             boolean b = true;
             JSONArray jsonArray = new JSONArray(strJSON);
-            for (int i=0;i<jsonArray.length();i+=1) {
+            for (int i = 0; i < jsonArray.length(); i += 1) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 if (userString.equals(jsonObject.getString("User"))) {
                     b = false;
-                    for (int i1=0;i1<columnStrings.length;i1+=1) {
+                    for (int i1 = 0; i1 < columnStrings.length; i1 += 1) {
                         loginStrings[i1] = jsonObject.getString(columnStrings[i1]);
                         Log.d("4JuneV1", "login(" + i1 + ") ==> " + loginStrings[i1]);
                     }
